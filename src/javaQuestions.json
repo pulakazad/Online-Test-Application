@@ -43,6 +43,72 @@
           "isAnswer": true
         }
       ]
+    },
+    {
+      "id": 3,
+      "question": "To prevent any method from overriding, we declare the method as?",
+      "choices": [
+        {
+          "name": "static",
+          "isAnswer": false
+        },
+        {
+          "name": "const",
+          "isAnswer": false
+        },
+        {
+          "name": "final",
+          "isAnswer": true
+        },
+        {
+          "name": "abstract",
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "What does multiple inheritance mean?",
+      "choices": [
+        {
+          "name": "One class inheriting from more super classes",
+          "isAnswer": true
+        },
+        {
+          "name": "More classes inheriting from one super class",
+          "isAnswer": false
+        },
+        {
+          "name": "More classes inheriting from more super classes",
+          "isAnswer": false
+        },
+        {
+          "name": "None of the above",
+          "isAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "What is the default value of a static integer variable of a class in Java?",
+      "choices": [
+        {
+          "name": "0",
+          "isAnswer": true
+        },
+        {
+          "name": "1",
+          "isAnswer": false
+        },
+        {
+          "name": "Null",
+          "isAnswer": false
+        },
+        {
+          "name": "-1",
+          "isAnswer": false
+        }
+      ]
     }
   ]
 }

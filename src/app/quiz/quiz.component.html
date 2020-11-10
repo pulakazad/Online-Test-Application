@@ -1,6 +1,9 @@
 <div class="container">
+    <div class="row justify-content-center">
+        <h4><span class="badge badge-success">{{finalMessage}}</span></h4>
+    </div>
     <h2>Java Questions</h2>
-    <p>Choose your answers carefully as you only get one chance to submit your</p>
+    <p>Choose your answers carefully as you only get one chance to submit your quiz!!</p>
     <form class="form-group">
         <div *ngFor="let each of quizInfo">
 
@@ -30,7 +33,9 @@
                 </tr>
             </table>
         </div>
-        <button class="btn btn-outline-dark" type="submit" value="submit" (click)="numberOfCorrect()">Submit Quiz</button>
+        <div class="row justify-content-center">
+            <button class="btn btn-outline-dark" type="submit" value="submit" (click)="numberOfCorrect()">Submit Quiz</button>
+        </div>
 
     </form>
     <div class="row justify-content-center">
