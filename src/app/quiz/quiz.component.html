@@ -1,5 +1,38 @@
 <div>
     <h2>Java Questions</h2>
-    <br/>
-    
+    <p>Choose your answers carefully as you only get one chance to submit your</p>
+    <form [formGroup]="form">
+        <div *ngFor="let each of quizInfo">
+
+            <table>
+                <tr>
+                    <h2>{{each.question}}</h2>
+                </tr>
+                <tr>
+                    <input [disabled]="!flag" id="{{'choice1' + each.id}}" name="{{'group'+each.id}}" type="radio" (change)="checkAnswer($event, each.id)"
+                        value="{{each.choices[0].isAnswer}}" />
+                    <label>{{each.choices[0].name}}</label>
+                </tr>
+                <tr>
+                    <input [disabled]="!flag"  id="{{'choice2' + each.id}}" name="{{'group'+each.id}}" type="radio" (change)="checkAnswer($event, each.id)"
+                        value="{{each.choices[1].isAnswer}}" />
+                    <label>{{each.choices[1].name}}</label>
+                </tr>
+                <tr>
+                    <input [disabled]="!flag"  id="{{'choice3' + each.id}}" name="{{'group'+each.id}}" type="radio" (change)="checkAnswer($event, each.id)"
+                        value="{{each.choices[2].isAnswer}}" />
+                    <label>{{each.choices[2].name}}</label>
+                </tr>
+                <tr>
+                    <input [disabled]="!flag"  id="{{'choice4' + each.id}}" name="{{'group'+each.id}}" type="radio" (change)="checkAnswer($event, each.id)"
+                        value="{{each.choices[3].isAnswer}}" />
+                    <label>{{each.choices[3].name}}</label>
+                </tr>
+            </table>
+        </div>
+        <button type="submit" value="submit" (click)="numberOfCorrect()">Submit Quiz</button>
+
+    </form>
+    <p>{{finalMessage}}</p>
+
 </div>

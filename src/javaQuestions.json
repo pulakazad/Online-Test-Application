@@ -1,69 +1,48 @@
 {
-  "questions": [
+  "quiz": [
     {
       "id": 1,
       "question": "Which of the following is not a Java feature?",
       "choices": [
         {
-          "option1": [
-            {
-              "name": "Dynamic",
-              "isAnswer": false
-            }
-          ],
-          "option2": [
-            {
-              "name": "Object-oriented",
-              "isAnswer": false
-            }
-          ],
-          "option3": [
-            {
-              "name": "Use of pointers",
-              "isAnswer": true
-            }
-          ],
-          "option4": [
-            {
-              "name": "Platform Independent",
-              "isAnswer": false
-            }
-          ]
+          "name": "Dynamic",
+          "isAnswer": false
+        },
+        {
+          "name": "Object-oriented",
+          "isAnswer": false
+        },
+        {
+          "name": "Use of pointers",
+          "isAnswer": true
+        },
+        {
+          "name": "Platform Independent",
+          "isAnswer": false
         }
       ]
     },
     {
       "id": 2,
-      "question": "What is used to find and fix bugs in the Java programs",
+      "question": "What is used to find and fix bugs in the Java programs?",
       "choices": [
         {
-          "option1": [
-            {
-              "name": "JVM",
-              "isAnswer": false
-            }
-          ],
-          "option2": [
-            {
-              "name": "JRE",
-              "isAnswer": false
-            }
-          ],
-          "option3": [
-            {
-              "name": "JDK",
-              "isAnswer": false
-            }
-          ],
-          "option4": [
-            {
-              "name": "JDB",
-              "isAnswer": true
-            }
-          ]
+          "name": "JVM",
+          "isAnswer": false
+        },
+        {
+          "name": "JRE",
+          "isAnswer": false
+        },
+        {
+          "name": "JDK",
+          "isAnswer": false
+        },
+        {
+          "name": "JDB",
+          "isAnswer": true
         }
       ]
     }
-
   ]
 }
