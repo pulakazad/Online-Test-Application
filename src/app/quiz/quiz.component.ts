@@ -11,9 +11,6 @@ import { QuizService } from '../quiz.service';
 })
 export class QuizComponent implements OnInit {
 
-  form = new FormGroup({
-    c1: new FormControl('lamb'),
-  })
 
   public quizInfo: Quiz[];
 
@@ -22,7 +19,6 @@ export class QuizComponent implements OnInit {
   count: number = 0;
   correctAnswers = new Array(0,0,0,0);
 
-  message: string;
   public finalMessage: string = "";
 
 
@@ -30,6 +26,7 @@ export class QuizComponent implements OnInit {
 
   constructor(private quizService: QuizService) { }
 
+  //initializes the json data from quiz
   ngOnInit(): void {
     this.flag = true;
     this.quizService.loadQuizDetails().subscribe(data => 
@@ -37,7 +34,7 @@ export class QuizComponent implements OnInit {
         if(data) {
           this.quizInfo = data;
           this.size = this.quizInfo.length;
-
+          console.log("NUMBER OF QUESTIONS")
           console.log(this.size)
         }
           
@@ -46,24 +43,17 @@ export class QuizComponent implements OnInit {
     )
   }
 
+
+  //Checks to see if the choice is correct, if it is, then it is stored in an array
   checkAnswer(event: any, index: any) {
-    console.log(event.target.value);
-    console.log("THIS IS INDEX:")
-    console.log(index)
     if (event.target.value == 'true') {
-
       this.correctAnswers[index-1] = 1;
-
-      this.message = "Correct"
-      this.count++;
-      console.log(this.count)
     } else {
       this.correctAnswers[index - 1] = 0;
-      this.message = "Incorrect"
-      console.log(this.count)
     }
   }
 
+  //iterates through correctAnswers array and counts the amount correct displays at bottom
   numberOfCorrect() {
     this.flag = false;
     this.count = 0;

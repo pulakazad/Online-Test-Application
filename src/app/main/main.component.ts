@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+  buttonFlag: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.buttonFlag = true;
   }
 
+  hideButton() {
+    this.buttonFlag = false;
+  }
 }
